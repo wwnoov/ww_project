@@ -1,5 +1,5 @@
-# ww_project
-<h1>개인 프로젝트</h1>
+# <h1>개인 프로젝트</h1>
+
 <details>
 <summary>
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Eyes.png" alt="Eyes" width="2%" /> 사용한 기술 ... 
