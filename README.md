@@ -16,10 +16,10 @@
 
 ```python
 # Adrees
-기존 Mybatis 구현
+기존 Mybatis CURD 구현
 
 # Java_Mybatis_Project
-mysql 연동에서 Mybatis로 변경하여 구현
+mysql 에서 Mybatis로 변경하여 CRUD 구현
 
 # Oc_ProJect
 CSS / HTML /JavaSCript Web_Project
