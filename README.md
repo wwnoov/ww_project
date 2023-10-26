@@ -32,4 +32,6 @@ CSS / HTML /JavaSCript Web_Project
 <a href="#"><img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" /></a>
 <a href="#"><img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" /></a>
 <a href="#"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white" /></a>
-<a href="[#](https://github.com/wwnoov/ww_project/blob/a2b1be4d6e959e29adb490edc126f8ae58ac967a/Addrees/src/AddrMapper.xml#L8C2-L31C11)"><img src="https://img.shields.io/badge/Mybatis-%2300f.svg?style=for-the-badge&logo=Mybatis&logoColor=white"/></a>
+<a href="https://github.com/wwnoov/ww_project/blob/cb76ed09290a3929ac4769069b98cf9f38fbbe06/Java_Mybatis_Project/boards.sql#L1C1-L7C3"><img src="https://img.shields.io/badge/Mybatis-%2300f.svg?style=for-the-badge&logo=Mybatis&logoColor=white"/></a>
+
+
