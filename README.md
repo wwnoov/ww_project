@@ -2,7 +2,7 @@
 2023-09-19 ~ 2024-03-25
 
 
-## [ (https://fontawesome.com/icons/pen-nib?f=sharp&s=light)](https://cdn-icons-png.flaticon.com/128/3914/3914872.png?track=sph)개인프로젝트(https://fontawesome.com/icons/pen-nib?f=sharp&s=light)
+## 🔨개인프로젝트🔨
 <img src="https://cdn-icons-png.flaticon.com/128/3914/3914872.png?track=sph"/>
 1. Java Mybatis를 사용하여 CRUD게시판 구현
 2. CSS / HTML / JavaScript 를 활용한 웹퍼블리싱
