@@ -1,0 +1,7 @@
+/* 클래스 백그라운드 속성 */
+.bg{
+    background:url('./images/background.jpg') center center;
+    background-size:cover;
+    background-attachment:fixed;
+    height:650px;
+  }

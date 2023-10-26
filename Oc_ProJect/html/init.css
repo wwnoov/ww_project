@@ -1,0 +1,15 @@
+/* 모든 HTML 요소에 대한 스타일 초기화 */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  /* 하이퍼링크 스타일 초기화 */
+  a, a:link, a:visited{
+    color:inherit;
+    text-decoration:none;
+  }
+  /* 목록 스타일 초기화 */
+  li{
+    list-style:none;
+  }

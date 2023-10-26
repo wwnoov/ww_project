@@ -1,0 +1,85 @@
+/* Web Fonts에서 글꼴 가져오기 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Varela+Round&display=swap');
+/* main 요소 설정 */
+main{
+  width:100%;
+  height:100vh;
+  color:white;
+  background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/me.jpg') center center;
+  background-size:cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+/* main 내부의 h4 스타일 설정 */
+main h4{
+  font-size:2rem;   /* 글꼴 크기 설정 */
+}
+/* main 내부의 h2 스타일 설정 */
+main h2{
+  font-size:3.5rem;
+  margin:2rem 0;
+  letter-spacing:3px;
+  font-family:'Varela Round', sans-serif; /* 웹 폰트 추가 */
+}
+/* main 내부의 p 스타일 설정 */
+main p{
+  max-width:500px;
+  margin:0 auto;
+  font-size:1.25rem;
+}
+/* main 내부의 다운로드 버튼 스타일 설정 */
+main button.download{
+  background-color:transparent;    /* 배경 투명 설정 */
+  border:3px solid white;
+  border-radius:20px;
+  padding:1rem 2rem;
+  margin-top:3rem;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+/* main 내부의 마우스 아이콘 버튼 스타일 설정 */
+main button.mouse{
+  background-color:transparent;
+  border:none;
+  color:white;
+  font-size:2rem;
+  position:absolute;
+  bottom:1rem;
+  left:50%;
+  transform:translateX(-50%);   /* 가로 방향으로 이동하여 가운데 정렬 */
+  animation:upDown 1s ease-in-out infinite;   /* upDown 애니메이션 적용 */
+  cursor:pointer;   /* 커서 설정 */
+}
+/* upDown 애니메이션 설정 */
+@keyframes upDown{
+  0%{
+    bottom:1rem;
+  }
+  50%{
+    bottom:1.5rem;
+  }
+  100%{
+    bottom:1rem;
+  }
+}
+/* main 내부의 h2 요소의 span 선택자 설정 */
+main h2 span::after{
+  content:"";     /* 가상 요소로 생성 */
+  height:40px;
+  width:3px;
+  background-color:#fff;
+  display:inline-block;
+  animation: blink .7s ease-in-out infinite;      /* blink 애니메이션 적용 */
+}
+/* blink 애니메이션 설정 */
+@keyframes blink {
+  0%{
+    opacity: 1;     /* 불투명도 1 (시작 상태) */
+  }
+  100%{
+    opacity: 0;     /* 불투명도 0 (종료 상태) */
+  }
+}
