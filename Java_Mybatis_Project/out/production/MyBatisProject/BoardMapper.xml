@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardMapper">
+
+	<!-- 해당 sql을 메서드와 연결해서 처리. id는 메서드명, resultType 리턴, parameterType 매개변수 -->
+
+    <insert id="insertBoard" parameterType="BoardVO">
+		INSERT INTO boards (btitle, bcontent, bwriter)
+		VALUES (#{btitle}, #{bcontent}, #{bwriter})
+    </insert>
+
+	<select id="getBoard" resultType="BoardVO">
+		SELECT *
+		FROM boards
+		ORDER BY bno DESC
+	</select>
+
+	<select id="readBoard" resultType="BoardVO" parameterType="int">
+		SELECT *
+		FROM boards
+		Where bno = #{bno}
+	</select>
+
+	<update id="updateBoard" parameterType="BoardVO">
+		UPDATE boards SET
+			btitle = #{btitle},
+			bcontent = #{bcontent},
+			bwriter = #{bwriter}
+		WHERE bno = #{bno}
+	</update>
+
+	<delete id="deleteBoard" parameterType="int">
+		DELETE FROM boards
+		WHERE bno = #{bno}
+	</delete>
+
+	<delete id="clearBoard" parameterType="BoardVO">
+		DELETE FROM boards
+	</delete>
+
+</mapper>
