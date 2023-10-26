@@ -2,12 +2,13 @@
 2023-09-19 ~ 2024-03-25
 
 
-## 10월 개인프로젝트
+## 개인프로젝트
 
-Java Mybatis를 사용하여 CRUD게시판 구현
+1. Java Mybatis를 사용하여 CRUD게시판 구현
+2. CSS / HTML / JavaScript 를 활용한 웹퍼블리싱
 
 ```bash
-개발기간 2023년 10월 16 ~ 2023년 10월27일
+1. 개발기간 2023년 10월 16 ~ 2023년 10월27일
 ```
 
 ## 설명
@@ -18,6 +19,9 @@ Java Mybatis를 사용하여 CRUD게시판 구현
 
 # Java_Mybatis_Project
 mysql 연동에서 Mybatis로 변경하여 구현
+
+# Web
+CSS / HTML /JavaSCript
 
 ```
 ## 사용기술
