@@ -4,7 +4,7 @@
 
 ## 10월 개인프로젝트
 
- [pip](https://pip.pypa.io/en/stable/) Java Mybatis를 사용하여 CRUD게시판 구현
+Java Mybatis를 사용하여 CRUD게시판 구현
 
 ```bash
 2023년 10월 16 ~ 2023년 10월27일
