@@ -8,6 +8,7 @@ public class BoardVO {
     private String bwriter;
     private Date bdate;
 
+    // 매개변수에 따른 생성자 생성
     public BoardVO(int bno, String btitle, String bcontent, String bwriter, Date bdate) {
         this.bno = bno;
         this.btitle = btitle;
