@@ -20,8 +20,8 @@
 # Java_Mybatis_Project
 mysql 연동에서 Mybatis로 변경하여 구현
 
-# Web
-CSS / HTML /JavaSCript
+# Oc_ProJect
+CSS / HTML /JavaSCript Web_Project
 
 ```
 ## 사용기술
