@@ -8,7 +8,7 @@ public class BoardVO {
     private String bwriter;
     private Date bdate;
 
-    // 매개변수에 따른 생성자 생성
+    // 매개변수에 따른 생성자 생성 (5개)
     public BoardVO(int bno, String btitle, String bcontent, String bwriter, Date bdate) {
         this.bno = bno;
         this.btitle = btitle;
@@ -16,20 +16,20 @@ public class BoardVO {
         this.bwriter = bwriter;
         this.bdate = bdate;
     }
-
+    // 매개변수에 따른 생성자 생성 (4개)
     public BoardVO(int bno, String btitle, String bcontent, String bwriter) {
         this.bno = bno;
         this.btitle = btitle;
         this.bcontent = bcontent;
         this.bwriter = bwriter;
     }
-
+    // 매개변수에 따른 생성자 생성 (3개)
     public BoardVO(String btitle, String bcontent, String bwriter) {
         this.btitle = btitle;
         this.bcontent = bcontent;
         this.bwriter = bwriter;
     }
-
+    // 매개변수에 따른 생성자 생성 (1개)
     public BoardVO(int bno) {
         this.bno = bno;
     }

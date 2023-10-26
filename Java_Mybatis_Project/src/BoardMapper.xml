@@ -6,6 +6,7 @@
 
 	<!-- 해당 sql을 메서드와 연결해서 처리. id는 메서드명, resultType 리턴, parameterType 매개변수 -->
 	<!-- 경로를 중요시 해야한다. 계속 오류가 발생하여 확인하니 경로 문제였음. 파일 기준이아니라 src폴더 기준으로 해야한다.-->
+
     <insert id="insertBoard" parameterType="BoardVO">
 		INSERT INTO boards (btitle, bcontent, bwriter)
 		VALUES (#{btitle}, #{bcontent}, #{bwriter})
@@ -35,7 +36,7 @@
 		DELETE FROM boards
 		WHERE bno = #{bno}
 	</delete>
-
+	<!-- 미구현 id는 초기화 하고 게시판 글만 삭제하고싶으나 아직 구현하지 못하였음-->
 	<delete id="clearBoard" parameterType="BoardVO">
 		DELETE FROM boards
 	</delete>

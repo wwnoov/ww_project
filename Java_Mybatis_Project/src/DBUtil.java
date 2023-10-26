@@ -25,6 +25,7 @@ public class DBUtil {
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 
 		} catch (Exception e) {
+			//예외 처리
 			System.out.println("MyBatis 설정 파일 가져오는 중 문제 발생!!");
 			e.printStackTrace();
 		}

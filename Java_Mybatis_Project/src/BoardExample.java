@@ -22,14 +22,12 @@ public class BoardExample {
 		// 메인 메뉴 출력
 		db.mainMenu();
 
-
 		while(true) {
 			// 사용자 입력을 받음
 			String cmd = scan.nextLine();
 			// 4를 입력하면 프로그램 종료
 			if (cmd.equals("4")) {
 				db.exit();
-
 			}
 			// 1을 입력하면 게시글 작성
 			else if (cmd.equals("1")) {
@@ -46,10 +44,7 @@ public class BoardExample {
 
 				// 게시물 등록/취소 서브 메뉴 출력
 				db.okSubMenu();
-
 				String createSubMenuNo = scan.nextLine();
-
-
 				switch (createSubMenuNo) {
 					case "1":
 						// 게시물 등록
@@ -67,7 +62,6 @@ public class BoardExample {
 				db.homeBoard();
 				WebView.printWebView(boardList);
 				db.mainMenu();
-
 			}
 			// 2를 입력하면 게시물 읽기, 수정, 삭제 서브 메뉴 출력
 			else if(cmd.equals("2")){
@@ -79,9 +73,7 @@ public class BoardExample {
 				db.readBnoBoard(boardList);
 				// 읽기 서브 메뉴 출력
 				db.readSubMenu();
-
 				String readSubMenuNo = scan.nextLine();
-
 				switch (readSubMenuNo){
 
 					case "1" :
@@ -98,9 +90,7 @@ public class BoardExample {
 
 						// 게시물 수정/취소 서브 메뉴 출력
 						db.okSubMenu();
-
 						String createSubMenuNo = scan.nextLine();
-
 						switch (createSubMenuNo) {
 
 							case "1":
@@ -108,9 +98,7 @@ public class BoardExample {
 								db.updateBoard(bno, btitle, bcontent, bwriter);
 								System.out.println("[게시물 수정 완료]");
 								break;
-
 							case "2":
-
 								System.out.println("[게시물 수정 취소]");
 								break;
 						}
@@ -129,7 +117,6 @@ public class BoardExample {
 								db.deleteBoard(bno);
 								System.out.println(bno + "번째 게시물 삭제 완료");
 								break;
-
 							case "2":
 								System.out.println("게시물 삭제 취소");
 								break;
@@ -159,7 +146,6 @@ public class BoardExample {
 						db.clearBoard();
 						System.out.println("[게시물 전체 삭제 완료]");
 						break;
-
 					case "2":
 						System.out.println("[게시물 전체 삭제 취소]");
 						break;
