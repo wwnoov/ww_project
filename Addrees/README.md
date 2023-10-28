@@ -1,18 +1,8 @@
-#  💻에듀테크 풀스택 개발자 양aa성3기💻
-2023-09-19 ~ 2024-03-25
+#  💻Java Mybatis를 사용하여 CRUD게시판 구현💻
+프로젝트기간 2023년 10월 16 ~ 2023년 10월27일
 
 
 ## 🔨개인프로젝트🔨
-
-1. Java Mybatis를 사용하여 CRUD게시판 구현
-2. CSS / HTML / JavaScript 를 활용한 웹퍼블리싱
-
-```bash
-1. 프로젝트기간 2023년 10월 16 ~ 2023년 10월27일
-2. 프로젝트기간 2023년 10월 16 ~ 2023년 10월27일
-```
-
-## 👋 설명👋
 
 ```python
 # Adrees
@@ -23,6 +13,10 @@ mysql 에서 Mybatis로 변경하여 CRUD 구현
 
 # Oc_ProJect
 CSS / HTML /JavaSCript Web_Project
+
+## 👋 설명👋
+
+
 
 ```
 ## :page_with_curl:사용기술:page_with_curl:
