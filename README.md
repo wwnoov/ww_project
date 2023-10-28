@@ -4,7 +4,7 @@
 
 ## 🔨개인프로젝트🔨
 
-👉 <a href="Addrees/README.md style="text-decoration: none;">링크 텍스트</a>
+👉 <a href="Addrees/README.md" style="text-decoration: none;">링크 텍스트</a>
 
 2. CSS / HTML / JavaScript 를 활용한 웹퍼블리싱
 ```bash
