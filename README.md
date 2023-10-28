@@ -4,7 +4,7 @@
 
 ## 🔨개인프로젝트🔨
 
-[👉](Addrees/README.md) <a href="Addrees/README.md" style="text-decoration: none;">Java Mybatis를 사용하여 CRUD게시판 구현</a>
+[👉](Addrees/README.md) <a href="Addrees/README.md" style="text-decoration-line: none;">Java Mybatis를 사용하여 CRUD게시판 구현</a>
 <span style="text-decoration:none;">[Java Mybatis를 사용하여 CRUD게시판 구현](Addrees/README.md)</span>
 2. CSS / HTML / JavaScript 를 활용한 웹퍼블리싱
 ```bash
