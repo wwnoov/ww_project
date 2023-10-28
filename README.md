@@ -4,7 +4,8 @@
 
 ## 🔨개인프로젝트🔨
 
-👉[1. Java Mybatis를 사용하여 CRUD게시판 구현](Addrees/README.md){: target="_blank"}
+👉[1. Java Mybatis를 사용하여 CRUD게시판 구현](){: target="_blank"}
+<a href="Addrees/README.md style="text-decoration: none;">링크 텍스트</a>
 {:text-decoration-line:none}
 
 2. CSS / HTML / JavaScript 를 활용한 웹퍼블리싱
