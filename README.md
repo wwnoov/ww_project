@@ -5,9 +5,7 @@
 ## 🔨개인프로젝트🔨
 
 [👉](Addrees/README.md) <a href="Addrees/README.md" style="text-decoration: none;">Java Mybatis를 사용하여 CRUD게시판 구현</a>
-<a style="text-decoration:none;">[Java Mybatis를 사용하여 CRUD게시판 구현](Addrees/README.md)</a>
-[참조][흠]
-[흠]:Addrees/README.md
+<span style="text-decoration:none;">[Java Mybatis를 사용하여 CRUD게시판 구현](Addrees/README.md)</span>
 2. CSS / HTML / JavaScript 를 활용한 웹퍼블리싱
 ```bash
 1. 프로젝트기간 2023년 10월 16 ~ 2023년 10월27일
