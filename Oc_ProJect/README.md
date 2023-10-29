@@ -5,8 +5,8 @@
 ## 🔨개인프로젝트🔨
 
 ```python
-# Adrees
-기존 Mybatis CURD 구현
+# Oc_ProJect
+CSS / HTML /JavaSCript Web_Project
 
 ```
 ## 👋 설명👋
