@@ -1,4 +1,4 @@
-#  💻Java Mybatis를 사용하여 CRUD게시판 구현💻
+#  💻CSS / HTML / JavaScript 를 활용한 웹퍼블리싱💻
 프로젝트기간 2023년 10월 16 ~ 2023년 10월27일
 
 
