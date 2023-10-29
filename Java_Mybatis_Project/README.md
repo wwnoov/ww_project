@@ -6,8 +6,8 @@
 ## 🔨개인프로젝트🔨
 
 ```python
-# Adrees
-기존 Mybatis CURD 구현
+# Java_Mybatis_Project
+MySQL 에서 Mybatis로 변경하여 CRUD게시판 구현
 
 ```
 ## 👋 설명👋
