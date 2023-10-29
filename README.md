@@ -5,7 +5,7 @@
 
 ## 🔨개인프로젝트🔨
 👉 [1.Java Mybatis CRUD게시판](Addrees/README.md)<br>
-👉 [2.Java MySQL에서 Mybatis로 변경하여 CRUD게시판](Java_MyBatis_Projet/README.md)<br>
+👉 [2.Java MySQL에서 Mybatis로 변경하여 CRUD게시판](Java_Mybatis_Project/README. md)<br>
 👉 [3.CSS / HTML / JavaScript 를 활용한 웹퍼블리싱](Oc_ProJect/README.md)
 ```bash
 1. 프로젝트기간 2023년 10월 16일 ~ 2023년 11월03일
