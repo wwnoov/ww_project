@@ -3,7 +3,6 @@
 2023년 09월 19일 ~ 2024년 03월 25일
 ```
 
-2.
 ## 🔨개인프로젝트🔨
 #### [👉1.Java Mybatis CRUD게시판](Addrees/README.md)
 #### [👉2.Java MySQL에서 Mybatis로 변경하여 CRUD게시판](Java_Mybatis_Project/README.md)
