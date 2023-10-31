@@ -11,7 +11,7 @@ CSS / HTML /JavaSCript Web_Project
 ```
 ## 👋 설명👋
 
-
+![ocweb](https://github.com/wwnoov/ww_project/assets/145524959/e982d9c0-8d04-4739-8588-775120880d51)
 
 ```
 ## :page_with_curl:사용기술:page_with_curl:
