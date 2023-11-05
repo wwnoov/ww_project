@@ -1,4 +1,4 @@
-#  💻Java MySQL에서 Mybatis로 변경하여 CRUD게시💻
+#  💻Java MySQL에서 Mybatis로 변경하여 CRUD게시판💻
 ```bash
 2023년 09월 19일 ~ 2024년 03월 25일
 ```
