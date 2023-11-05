@@ -8,11 +8,9 @@
 ```python
 # Java_Mybatis_Project
 MySQL 에서 Mybatis로 변경하여 CRUD게시판 구현
-
 ```
-## 👋 설명👋
-![mybatis](https://github.com/wwnoov/ww_project/assets/145524959/50f5a17a-69cf-4352-929c-f4fc6b838b3f)
 
+## 👋 설명👋
 ```
 내용
 ```
