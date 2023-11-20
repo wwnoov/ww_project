@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <context-param>
+        <param-name>MySQL_Driver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>MySQL_URL</param-name>
+        <param-value>jdbc:mysql://localhost:3306/mytestone</param-value>
+    </context-param>
+    <context-param>
+        <param-name>MySQL_Id</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>MySQL_Pwd</param-name>
+        <param-value>12345</param-value>
+    </context-param>
+    <context-param>
+        <param-name>POSTS_PER_PAGE</param-name>
+        <param-value>10</param-value>
+    </context-param>
+    <context-param>
+        <param-name>PAGES_PER_BLOCK</param-name>
+        <param-value>5</param-value>
+    </context-param>
+    <filter>
+        <filter-name>SetCharEncoding</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>SetCharEncoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>MVCBoardList</servlet-name>
+        <servlet-class>mvcboard.ListController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MVCBoardList</servlet-name>
+        <url-pattern>/NovJspProject/mvcboard/list.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MVCBoardWrite</servlet-name>
+        <servlet-class>mvcboard.WriteController</servlet-class>
+        <multipart-config>
+            <max-file-size>1048576</max-file-size> <!-- 1MB -->
+            <max-request-size>10485760</max-request-size> <!-- 10MB -->
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MVCBoardWrite</servlet-name>
+        <url-pattern>/NovJspProject//mvcboard/write.do</url-pattern>
+    </servlet-mapping>
+</web-app>
