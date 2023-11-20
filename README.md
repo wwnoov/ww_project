@@ -7,10 +7,13 @@
 #### [👉1.Java Mybatis CRUD게시판](Addrees/README.md)
 #### [👉2.Java MySQL에서 Mybatis로 변경하여 CRUD게시판](Java_Mybatis_Project/README.md)
 #### [👉3.CSS / HTML / JavaScript 를 활용한 웹퍼블리싱](Oc_ProJect/README.md)
+#### [👉4.JSP 에서 MVC2패턴 게시판 구현](NovJspProject/README.md)
+
 ```bash
 🕰️1. 프로젝트기간 2023년 10월 16일 ~ 2023년 11월03일
 🕰️2. 프로젝트기간 2023년 10월 16일 ~ 2023년 11월03일
 🕰️3. 프로젝트기간 2023년 10월 16일 ~ 2023년 11월03일
+🕰️4. 프로젝트기간 2023년 11월 06일 ~ 2023년 12월01일
 ```
 
 ## 👋 설명👋
@@ -24,6 +27,9 @@ MySQL 에서 Mybatis로 변경하여 CRUD게시판 구현
 
 # Oc_ProJect
 CSS / HTML /JavaSCript Web_Project
+
+# NovJspProject
+JSP 에서 MVC2패턴 게시판 구현
 
 ```
 ## :page_with_curl:사용기술:page_with_curl:
