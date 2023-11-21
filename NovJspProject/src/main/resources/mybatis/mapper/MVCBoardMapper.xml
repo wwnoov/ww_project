@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.mapper.MVCBoardMapper">
+    <select id="selectCount" parameterType="map" resultType="int">
+        select count(*)
+        from mvcboard
+        <if test="searchWord != null and !searchWord.equals('')">
+            where
+            <choose>
+                <when test="searchField == 'title'">
+                    title like concat('%', #{searchWord}, '%')
+                </when>
+                <otherwise>
+                    content like concat('%', #{searchWord}, '%')
+                </otherwise>
+            </choose>
+        </if>
+        order by idx desc
+    </select>
+
+    <select id="selectListPage" parameterType="map" resultType="mvcboard.MVCBoardDTO">
+        SELECT *
+        FROM mvcboard
+        <if test="searchWord != null and !searchWord.equals('')">
+            WHERE
+            <choose>
+                <when test="searchField == 'title'">
+                    title like concat('%', #{searchWord}, '%')
+                </when>
+                <otherwise>
+                    content like concat('%', #{searchWord}, '%')
+                </otherwise>
+            </choose>
+        </if>
+    </select>
+
+    <insert id="insertWrite" parameterType="mvcboard.MVCBoardDTO">
+        INSERT
+        INTO mvcboard(idx, name, title, content, ofile, sfile, pass)
+        VALUES(#{idx}, #{name}, #{title}, #{content}, #{ofile}, #{sfile}, #{pass})
+    </insert>
+
+<!--    <select id="selectListPageWithPaging" parameterType="map" resultType="mvcboard.MVCBoardDTO">-->
+<!--        <![CDATA[-->
+<!--        SELECT *-->
+<!--        FROM mvcboard-->
+<!--        WHERE idx > 0-->
+<!--        ]]>-->
+<!--        <if test="searchWord != null and !searchWord.equals('')">-->
+<!--            AND-->
+<!--            <choose>-->
+<!--                <when test="searchField == 'title'">-->
+<!--                    title LIKE CONCAT('%', #{searchWord}, '%')-->
+<!--                </when>-->
+<!--                <otherwise>-->
+<!--                    content LIKE CONCAT('%', #{searchWord}, '%')-->
+<!--                </otherwise>-->
+<!--            </choose>-->
+<!--        </if>-->
+<!--        order by idx desc-->
+<!--        LIMIT #{pageNum}, 10-->
+<!--    </select>-->
+
+    <select id="selectListPageWithPaging" parameterType="map" resultType="mvcboard.MVCBoardDTO">
+        SELECT * FROM
+        ( SELECT @ROWNUM := @ROWNUM + 1 AS ROWNUM, b.*
+        FROM  mvcboard b,(SELECT @ROWNUM := 0 ) TMP
+
+        <if test="searchWord != null and !searchWord.equals('')">
+            <choose>
+                <when test="searchField == 'title'">
+                    WHERE title LIKE CONCAT('%', #{searchWord}, '%')
+                </when>
+                <otherwise>
+                    WHERE content LIKE CONCAT('%', #{searchWord}, '%')
+                </otherwise>
+            </choose>
+        </if>
+
+        ORDER BY idx DESC ) T
+        WHERE ROWNUM BETWEEN #{ start } AND #{ end }
+
+    </select>
+
+    <select id="selectView" parameterType="String" resultType="mvcboard.MVCBoardDTO">
+        select *
+        from mvcboard
+        where idx = #{idx}
+
+    </select>
+
+    <update id="updateVisitCount" parameterType="String">
+        update mvcboard
+        set visitcount = visitcount + 1
+        where idx = #{idx}
+
+    </update>
+
+    <update id="downCountPlus" parameterType="String">
+        update mvcboard
+        set downcount = downcount + 1
+        where idx = #{idx}
+    </update>
+
+    <select id="confirmPassword" parameterType="map">
+        select count(idx)
+        from mvcboard
+        where pass = #{pass} and idx = #{idx}
+    </select>
+
+    <delete id="deletePost">
+        delete
+        from mvcboard
+        where idx = #{idx}
+    </delete>
+
+    <update id="updatePost" parameterType="mvcboard.MVCBoardDTO">
+        update mvcboard
+        set title = #{title}, name = #{name},
+        content = #{content}, ofile = #{ofile}, sfile = #{sfile}
+        where idx = #{idx} and pass = #{pass}
+    </update>
+</mapper>

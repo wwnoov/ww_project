@@ -1,19 +1,19 @@
 package mvcboard;
 
-import java.io.IOException;
-
-import fileupload.FileUtil;
+import utils.FileUtil;
 import utils.JSFunction;
+
+import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 
-@WebServlet("/mvcboard/edit.do")
+@WebServlet(value = "/mvcboard/edit.do")
 @MultipartConfig(
         maxFileSize = 1024 * 1024 * 1,
         maxRequestSize = 1024 * 1024 * 10
@@ -28,7 +28,7 @@ public class EditController extends HttpServlet {
     MVCBoardDAO dao = new MVCBoardDAO();
     MVCBoardDTO dto = dao.selectView(idx);
     req.setAttribute("dto", dto);
-    req.getRequestDispatcher("/14MVCBoard/Edit.jsp").forward(req, resp);
+    req.getRequestDispatcher("/MVCBoard/Edit.jsp").forward(req, resp);
   }
 
   @Override
@@ -71,7 +71,7 @@ public class EditController extends HttpServlet {
     dto.setPass(pass);
 
     // 원본 파일명과 저장된 파일 이름 설정
-    if (originalFileName != "") {
+    if (originalFileName != null && !originalFileName.equals("")){
       String savedFileName = FileUtil.renameFile(saveDirectory, originalFileName);
 
       dto.setOfile(originalFileName);  // 원래 파일 이름
@@ -89,7 +89,6 @@ public class EditController extends HttpServlet {
     // DB에 수정 내용 반영
     MVCBoardDAO dao = new MVCBoardDAO();
     int result = dao.updatePost(dto);
-    dao.close();
 
     // 성공 or 실패?
     if (result == 1) {  // 수정 성공
@@ -97,8 +96,7 @@ public class EditController extends HttpServlet {
       resp.sendRedirect("../mvcboard/view.do?idx=" + idx);
     }
     else {  // 수정 실패
-      JSFunction.alertLocation(resp, "비밀번호 검증을 다시 진행해주세요.",
-              "../mvcboard/view.do?idx=" + idx);
+      JSFunction.alertLocation(resp, "비밀번호 검증을 다시 진행해주세요.","../mvcboard/view.do?idx=" + idx);
     }
   }
 }
