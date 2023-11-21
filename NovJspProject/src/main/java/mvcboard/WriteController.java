@@ -1,5 +1,6 @@
 package mvcboard;
 
+import utils.Encrypt;
 import utils.FileUtil;
 import utils.JSFunction;
 
@@ -45,7 +46,7 @@ public class WriteController extends HttpServlet {
     dto.setName(req.getParameter("name"));
     dto.setTitle(req.getParameter("title"));
     dto.setContent(req.getParameter("content"));
-    dto.setPass(req.getParameter("pass"));
+    dto.setPass(Encrypt.getEncrypt(req.getParameter("pass")));
 
     // 원본 파일명과 저장된 파일 이름 설정
     if (originalFileName != null && !originalFileName.equals("")){

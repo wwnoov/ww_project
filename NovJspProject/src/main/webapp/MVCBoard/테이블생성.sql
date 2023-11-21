@@ -7,6 +7,6 @@ CREATE TABLE mvcboard(
                          ofile varchar(200),
                          sfile varchar(30),
                          downcount int DEFAULT 0 NOT NULL,
-                         pass varchar(50) NOT NULL,
+                         pass varchar(300) NOT NULL,
                          visitcount int DEFAULT 0 NOT NULL
 );

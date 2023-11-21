@@ -1,5 +1,6 @@
 package mvcboard;
 
+import utils.Encrypt;
 import utils.FileUtil;
 import utils.JSFunction;
 
@@ -28,7 +29,7 @@ public class PassController extends HttpServlet {
     // 매개변수 저장
     String idx = req.getParameter("idx");
     String mode = req.getParameter("mode");
-    String pass = req.getParameter("pass");
+    String pass = Encrypt.getEncrypt(req.getParameter("pass"));
 
     // 비밀번호 확인
     MVCBoardDAO dao = new MVCBoardDAO();

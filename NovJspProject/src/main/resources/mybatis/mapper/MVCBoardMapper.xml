@@ -42,26 +42,7 @@
         VALUES(#{idx}, #{name}, #{title}, #{content}, #{ofile}, #{sfile}, #{pass})
     </insert>
 
-<!--    <select id="selectListPageWithPaging" parameterType="map" resultType="mvcboard.MVCBoardDTO">-->
-<!--        <![CDATA[-->
-<!--        SELECT *-->
-<!--        FROM mvcboard-->
-<!--        WHERE idx > 0-->
-<!--        ]]>-->
-<!--        <if test="searchWord != null and !searchWord.equals('')">-->
-<!--            AND-->
-<!--            <choose>-->
-<!--                <when test="searchField == 'title'">-->
-<!--                    title LIKE CONCAT('%', #{searchWord}, '%')-->
-<!--                </when>-->
-<!--                <otherwise>-->
-<!--                    content LIKE CONCAT('%', #{searchWord}, '%')-->
-<!--                </otherwise>-->
-<!--            </choose>-->
-<!--        </if>-->
-<!--        order by idx desc-->
-<!--        LIMIT #{pageNum}, 10-->
-<!--    </select>-->
+
 
     <select id="selectListPageWithPaging" parameterType="map" resultType="mvcboard.MVCBoardDTO">
         SELECT * FROM
@@ -105,7 +86,7 @@
     </update>
 
     <select id="confirmPassword" parameterType="map">
-        select count(idx)
+        select count(*)
         from mvcboard
         where pass = #{pass} and idx = #{idx}
     </select>
@@ -120,6 +101,6 @@
         update mvcboard
         set title = #{title}, name = #{name},
         content = #{content}, ofile = #{ofile}, sfile = #{sfile}
-        where idx = #{idx} and pass = #{pass}
+        where idx = #{idx} and #{pass} = #{pass}
     </update>
 </mapper>

@@ -1,5 +1,6 @@
 package mvcboard;
 
+import utils.Encrypt;
 import utils.FileUtil;
 import utils.JSFunction;
 
@@ -41,7 +42,7 @@ public class EditController extends HttpServlet {
     // 파일 업로드
     String originalFileName = "";
     try {
-      originalFileName = FileUtil.uploadFile(req, saveDirectory);
+      originalFileName = String.valueOf(FileUtil.uploadFile(req, saveDirectory));
     }
     catch (Exception e) {
       JSFunction.alertBack(resp, "파일 업로드 오류입니다.");
@@ -60,15 +61,16 @@ public class EditController extends HttpServlet {
 
     // 비밀번호는 session에서 가져옴
     HttpSession session = req.getSession();
-    String pass = (String)session.getAttribute("pass");
-
+    // 암호화테스트
+    String pass = Encrypt.getEncrypt((String)session.getAttribute("pass"));
+    System.out.println(pass);
     // DTO에 저장
     MVCBoardDTO dto = new MVCBoardDTO();
     dto.setIdx(idx);
     dto.setName(name);
     dto.setTitle(title);
     dto.setContent(content);
-    dto.setPass(pass);
+    dto.setPass(Encrypt.getEncrypt(pass));
 
     // 원본 파일명과 저장된 파일 이름 설정
     if (originalFileName != null && !originalFileName.equals("")){
@@ -89,9 +91,10 @@ public class EditController extends HttpServlet {
     // DB에 수정 내용 반영
     MVCBoardDAO dao = new MVCBoardDAO();
     int result = dao.updatePost(dto);
-
+    System.out.println(result);
     // 성공 or 실패?
     if (result == 1) {  // 수정 성공
+
       session.removeAttribute("pass");
       resp.sendRedirect("../mvcboard/view.do?idx=" + idx);
     }
