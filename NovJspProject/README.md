@@ -11,8 +11,6 @@ Jsp에서 MyBatis를 활용하여 MVC2 타입의 Board 구현
 ```
 
 ## 👋 설명👋
-![mybatis](https://github.com/wwnoov/ww_project/assets/145524959/50f5a17a-69cf-4352-929c-f4fc6b838b3f)
-
 
 ```
 내용
