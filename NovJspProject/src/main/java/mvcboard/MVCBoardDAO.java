@@ -99,6 +99,7 @@ public class MVCBoardDAO {
     if (result == 1) {
       return true;
     } else {
+      System.out.println("비밀번호 확인 중 오류 발생...");
       return false;
     }
   }

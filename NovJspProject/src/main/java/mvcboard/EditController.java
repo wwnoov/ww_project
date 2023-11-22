@@ -63,7 +63,6 @@ public class EditController extends HttpServlet {
     HttpSession session = req.getSession();
     // 암호화테스트
     String pass = Encrypt.getEncrypt((String)session.getAttribute("pass"));
-    System.out.println(pass);
     // DTO에 저장
     MVCBoardDTO dto = new MVCBoardDTO();
     dto.setIdx(idx);

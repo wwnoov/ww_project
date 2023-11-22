@@ -33,10 +33,10 @@ public class ViewController extends HttpServlet {
     String[] mimeStr = {"png","jpg","gif","jpeg"};
     List<String> mimeList = Arrays.asList(mimeStr);
     boolean isImage = false;
-    System.out.println(mimeList);
+
     if (mimeList.contains(ext)){
       isImage = true;
-      System.out.println("test");
+
     }
     //게시물 (dto) 저장 후 뷰로 포워드
     req.setAttribute("dto" ,dto);
