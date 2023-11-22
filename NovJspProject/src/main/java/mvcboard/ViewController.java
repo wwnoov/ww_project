@@ -30,7 +30,7 @@ public class ViewController extends HttpServlet {
     if (fileName!=null){
       ext = fileName.substring(fileName.lastIndexOf(".")+1);
     }
-    String[] mimeStr = {"png","jpg","gif","jpeg"};
+    String[] mimeStr = {"png","jpg","gif","jpeg","PNG","JPG","GIF","JPEG"};
     List<String> mimeList = Arrays.asList(mimeStr);
     boolean isImage = false;
 
