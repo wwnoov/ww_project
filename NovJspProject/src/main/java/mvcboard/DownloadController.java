@@ -20,7 +20,7 @@ public class DownloadController extends HttpServlet {
     String ofile = req.getParameter("ofile");  // 원본 파일명
     String sfile = req.getParameter("sfile");  // 저장된 파일명
     String idx = req.getParameter("idx");      // 게시물 일련번호
-    System.out.println(ofile);
+
     // 파일 다운로드
     FileUtil.download(req, resp, "/Uploads", sfile, ofile);
 

@@ -90,7 +90,6 @@ public class EditController extends HttpServlet {
     // DB에 수정 내용 반영
     MVCBoardDAO dao = new MVCBoardDAO();
     int result = dao.updatePost(dto);
-    System.out.println(result);
     // 성공 or 실패?
     if (result == 1) {  // 수정 성공
 
