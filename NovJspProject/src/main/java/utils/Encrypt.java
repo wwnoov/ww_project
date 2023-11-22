@@ -5,7 +5,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class Encrypt {
     public static String getEncrypt(String pwd) {
-
+   
         String result = "";
         String salt = "";
         try {
