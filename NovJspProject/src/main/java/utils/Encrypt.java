@@ -5,9 +5,9 @@ import java.security.NoSuchAlgorithmException;
 
 public class Encrypt {
     public static String getEncrypt(String pwd) {
-        // salt의 값이 널이면 암호값이 동일함 임의의 단어입력해야 암호화 값이 다름
+   
         String result = "";
-        String salt = "abc";
+        String salt = "";
         try {
             //1. SHA256 알고리즘 객체 생성
             MessageDigest md = MessageDigest.getInstance("SHA-256");
