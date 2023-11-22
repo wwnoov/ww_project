@@ -2,7 +2,7 @@
          pageEncoding="UTF-8"%>
 <html>
 <head>
-    <title>Default.jsp</title>
+    <title>파일 첨부형 게시판</title>
 </head>
 <body>
 
