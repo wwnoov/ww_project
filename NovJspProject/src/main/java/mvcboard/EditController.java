@@ -61,7 +61,9 @@ public class EditController extends HttpServlet {
 
     // 비밀번호는 session에서 가져옴
     HttpSession session = req.getSession();
+
     // 암호화테스트
+
     String pass = Encrypt.getEncrypt((String)session.getAttribute("pass"));
     // DTO에 저장
     MVCBoardDTO dto = new MVCBoardDTO();
@@ -69,7 +71,7 @@ public class EditController extends HttpServlet {
     dto.setName(name);
     dto.setTitle(title);
     dto.setContent(content);
-    dto.setPass(Encrypt.getEncrypt(pass));
+    dto.setPass(pass);
 
     // 원본 파일명과 저장된 파일 이름 설정
     if (originalFileName != null && !originalFileName.equals("")){

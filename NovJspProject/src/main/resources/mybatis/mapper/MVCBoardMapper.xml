@@ -37,9 +37,11 @@
     </select>
 
     <insert id="insertWrite" parameterType="mvcboard.MVCBoardDTO">
-        INSERT
-        INTO mvcboard(idx, name, title, content, ofile, sfile, pass)
-        VALUES(#{idx}, #{name}, #{title}, #{content}, #{ofile}, #{sfile}, #{pass})
+        INSERT INTO mvcboard (name, title, content,ofile, sfile, pass)
+        VALUES(#{name}, #{title}, #{content}, #{ofile}, #{sfile}, CONCAT(#{pass}, (SELECT AUTO_INCREMENT
+        FROM information_schema.tables
+        WHERE table_name = 'mvcboard'
+        AND table_schema = DATABASE())))
     </insert>
 
 
@@ -88,7 +90,8 @@
     <select id="confirmPassword" parameterType="map">
         select count(*)
         from mvcboard
-        where pass = #{pass} and idx = #{idx}
+        where pass = CONCAT (#{pass} , #{idx}) and idx = #{idx}
+
     </select>
 
     <delete id="deletePost">
@@ -101,6 +104,7 @@
         update mvcboard
         set title = #{title}, name = #{name},
         content = #{content}, ofile = #{ofile}, sfile = #{sfile}
-        where idx = #{idx} and #{pass} = #{pass}
+        where idx = #{idx}
+<!--        and pass = CONCAT(#{pass}, idx)-->
     </update>
 </mapper>
