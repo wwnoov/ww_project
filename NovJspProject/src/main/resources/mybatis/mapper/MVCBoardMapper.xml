@@ -3,6 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mybatis.mapper.MVCBoardMapper">
+
+ <!-- 글 갯수 -->       
     <select id="selectCount" parameterType="map" resultType="int">
         select count(*)
         from mvcboard
@@ -19,7 +21,7 @@
         </if>
         order by idx desc
     </select>
-
+<!-- 글 리스트 -->
     <select id="selectListPage" parameterType="map" resultType="mvcboard.MVCBoardDTO">
         SELECT *
         FROM mvcboard
@@ -35,7 +37,7 @@
             </choose>
         </if>
     </select>
-
+<!-- 글쓰기 -->
     <insert id="insertWrite" parameterType="mvcboard.MVCBoardDTO">
         INSERT INTO mvcboard (name, title, content,ofile, sfile, pass)
         VALUES(#{name}, #{title}, #{content}, #{ofile}, #{sfile}, CONCAT(#{pass}, (SELECT AUTO_INCREMENT
@@ -45,7 +47,7 @@
     </insert>
 
 
-
+<!-- 페이징 목록 -->
     <select id="selectListPageWithPaging" parameterType="map" resultType="mvcboard.MVCBoardDTO">
         SELECT * FROM
         ( SELECT @ROWNUM := @ROWNUM + 1 AS ROWNUM, b.*
@@ -66,40 +68,40 @@
         WHERE ROWNUM BETWEEN #{ start } AND #{ end }
 
     </select>
-
+<!-- 상세 보기 -->
     <select id="selectView" parameterType="String" resultType="mvcboard.MVCBoardDTO">
         select *
         from mvcboard
         where idx = #{idx}
 
     </select>
-
+<!-- 방문자 수 증가 -->
     <update id="updateVisitCount" parameterType="String">
         update mvcboard
         set visitcount = visitcount + 1
         where idx = #{idx}
 
     </update>
-
+<!-- 방문자 수 증가 -->
     <update id="downCountPlus" parameterType="String">
         update mvcboard
         set downcount = downcount + 1
         where idx = #{idx}
     </update>
-
+<!-- 암호 검증 -->
     <select id="confirmPassword" parameterType="map">
         select count(*)
         from mvcboard
         where pass = CONCAT (#{pass} , #{idx}) and idx = #{idx}
 
     </select>
-
+<!-- 글 삭제 -->
     <delete id="deletePost">
         delete
         from mvcboard
         where idx = #{idx}
     </delete>
-
+<!-- 글 업데이트 -->
     <update id="updatePost" parameterType="mvcboard.MVCBoardDTO">
         update mvcboard
         set title = #{title}, name = #{name},
