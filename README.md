@@ -29,7 +29,7 @@ MySQL 에서 Mybatis로 변경하여 CRUD게시판 구현
 CSS / HTML /JavaSCript Web_Project
 
 # NovJspProject
-JSP 에서 MVC2패턴 게시판 구현
+Jsp에서 MyBatis를 활용하여 MVC2 타입의 Board 구현
 
 ```
 ## :page_with_curl:사용기술:page_with_curl:
