@@ -8,14 +8,10 @@
 ```python
 # Jsp MyBatis MVC2 Board Project
 Jsp에서 MyBatis를 활용하여 MVC2 타입의 Board 구현
+페이징처리 완료 / 비밀번호 암호화 및 검증시스템 구현
 ```
 
 ## 👋 설명👋
-
-```
-내용
-```
-
 
 ### 비밀번호 암호화 
 https://github.com/wwnoov/ww_project/assets/145524959/53cedc27-9119-4856-9f17-136d9d474b28
