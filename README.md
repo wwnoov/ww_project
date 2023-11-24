@@ -34,7 +34,7 @@ JSP 에서 MVC2패턴 게시판 구현
 ```
 ## :page_with_curl:사용기술:page_with_curl:
 
-<div align="center">
+<div align="left">
 	<img src="https://img.shields.io/badge/Java-007396?style=flat&logo=Conda-Forge&logoColor=white" />
 	<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
 	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
