@@ -8,7 +8,8 @@
 ```python
 # Jsp MyBatis MVC2 Board Project
 Jsp에서 MyBatis를 활용하여 MVC2 타입의 Board 구현
-페이징처리 완료 / 비밀번호 암호화 및 검증시스템 구현
+페이징처리 완료 / 비밀번호 암호화시스템 구현
+비밀번호 검증 시스템 구현
 ```
 
 ## 👋 설명👋
@@ -25,7 +26,6 @@ https://github.com/wwnoov/ww_project/assets/145524959/d6debafd-5fdf-4b92-a4bb-f9
 ### 게시글 페이징
 https://github.com/wwnoov/ww_project/assets/145524959/a0a5598d-2acd-47fc-a0fe-02ffdd9c0ce5
 ### [코드 🏷](https://github.com/wwnoov/ww_project/blob/7ce77cd56c134ac804f75a25d98e45de8e0ce00e/NovJspProject/src/main/resources/mybatis/mapper/MVCBoardMapper.xml#L50C1-L68C53)
-
 
 
 
