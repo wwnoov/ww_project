@@ -31,7 +31,6 @@
         th, td {
             border: 1px solid #444444;
             padding: 10px;
-            text-align: center;
             flex: 1;
         }
         td{
@@ -77,7 +76,6 @@
             <th width="15%">작성자</th>
             <th width="10%">조회수</th>
             <th width="15%">작성일</th>
-            <th width="8%">첨부</th>
         </tr>
         <c:choose>
             <c:when test="${ empty boardLists }">  <!-- 게시물이 없을 때 -->

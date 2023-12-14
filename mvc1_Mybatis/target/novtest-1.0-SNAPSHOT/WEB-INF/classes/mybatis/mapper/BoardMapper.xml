@@ -6,11 +6,11 @@
 
 
     <select id="selectListPage" parameterType="map" resultType="board.BoardDTO">
-    SELECT *
-    FROM mvcboard
+    SELECT idx, name, title,  visitcount, postdate
+    FROM mvcboard order by idx desc
     </select>
     <select id="selectView" parameterType="String" resultType="board.BoardDTO">
-    select *
+    select idx, name, title,content,  visitcount, postdate
     from mvcboard
     where idx = #{idx}
     </select>
