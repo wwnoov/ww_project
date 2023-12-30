@@ -10,7 +10,7 @@
 #### [👉4.Jsp MyBatis MVC2 Board Project](NovJspProject/README.md)
 #### [👉5.Jsp MyBatis MVC1 Board Project](NovJspProject/README.md)
 #### [👉6.Jsp MyBatis MVC2 Board Project](NovJspProject/README.md)
-#### [👉7.Spring Basic Project](NovJspProject/README.md)
+#### [👉7.Spring Basic Project](https://github.com/wwnoov/ww_project/blob/dd5826b939788ad52f3b9868cc24be7d03cd24aa/spring_boardtest/README.md)
 
 ```bash
 🕰️1. 프로젝트기간 2023년 10월 16일 ~ 2023년 11월03일
