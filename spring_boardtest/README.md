@@ -1,12 +1,12 @@
-#  💻CSS / HTML / JavaScript 를 활용한 웹퍼블리싱💻
-프로젝트기간 2023년 10월 16 ~ 2023년 10월27일
+#  💻Spring basic project💻
+프로젝트기간 2023년 12월 18 ~ 2024년 01월02일
 
 
 ## 🔨개인프로젝트🔨
 
 ```python
-# Oc_ProJect
-CSS / HTML /JavaSCript Web_Project
+# Spring basic project
+Spring 
 ```
 
 ## 👋 설명👋
