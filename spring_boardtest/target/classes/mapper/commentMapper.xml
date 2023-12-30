@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Comment">
+    <insert id="save" parameterType="comment">
+        insert into comment_table(commentWriter, commentContents, boardId)
+        values(#{commentWriter}, #{commentContents}, #{boardId})
+    </insert>
+    <select id="findAll" parameterType="Long" resultType="comment">
+        select id,commentWriter, commentContents,boardId,commentCreatedTime from comment_table where boardId=#{boardId} order by id desc
+    </select>
+    <select id="findByComment" parameterType="Long" resultType="comment">
+         select id,commentWriter, commentContents ,boardId,commentCreatedTime from comment_table where id=#{id}
+    </select>
+    <delete id="delete" parameterType="Long">
+        delete from comment_table where id=#{id}
+    </delete>
+    <update id="update" parameterType="board">
+        update comment_table set  commentContents=#{commentContents}
+        where id=#{id}
+    </update>
+</mapper>
