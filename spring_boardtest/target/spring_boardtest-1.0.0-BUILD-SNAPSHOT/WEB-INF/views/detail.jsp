@@ -75,6 +75,9 @@
 
 </body>
 <script>
+    const backFn = () => {
+    location.href = "/board/paging";
+}
     const listFn = () => {
         const page = '${page}';
         location.href = "/board/paging?page=" + page;

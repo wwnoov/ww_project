@@ -86,6 +86,14 @@
             </c:otherwise>
         </c:choose>
     </ul>
+    <div class="mb-3">
+        <button class="btn btn-primary" onclick="saveFn()">글작성</button>
+    </div>
 </div>
+<script>
+    const saveFn = () => {
+        location.href = "/board/save";
+    }
+</script>
 </body>
 </html>

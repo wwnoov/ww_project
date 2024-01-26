@@ -1,0 +1,11 @@
+
+c
+java:S1192#"HDefine a constant instead of duplicating this literal "cdetail" 3 times.(ýý÷—üÿÿÿÿ
+^
+java:S1192""HDefine a constant instead of duplicating this literal "comment" 3 times.(»“‹â
+|
+java:S1488"fImmediately return this expression instead of assigning it to the temporary variable "commentDTOList".(ïïìò
+€
+java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ
+R
+java:S1128"7Remove this unused import 'kr.co.chunjae.dto.BoardDTO'.(ÏÞÔ¤ýÿÿÿÿ

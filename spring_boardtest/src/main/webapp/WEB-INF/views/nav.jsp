@@ -21,13 +21,7 @@
                     <a class="nav-link" href="/">홈</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/board/save">글작성</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/board/list">글목록</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/board/paging">페이징 목록</a>
+                    <a class="nav-link" href="/board/paging">게시물 리스트</a>
                 </li>
             </ul>
         </div>

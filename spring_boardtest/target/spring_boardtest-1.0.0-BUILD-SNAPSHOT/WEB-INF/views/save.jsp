@@ -88,9 +88,16 @@
                 </ul>
             </div>
         </c:if>
-
+        <div class="mb-3">
         <button type="submit" class="btn btn-primary">작성</button>
+        <button type="button" class="btn btn-primary" onclick="backFn()">뒤로가기</button>
+        </div>
     </form>
 </div>
+<script>
+    const backFn = () => {
+        location.href = "/board/paging";
+    }
+</script>
 </body>
 </html>

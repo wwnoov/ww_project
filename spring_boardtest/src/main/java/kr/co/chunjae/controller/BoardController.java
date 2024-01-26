@@ -51,7 +51,7 @@ public class BoardController {
     }
 
     // 모든 게시글 목록 메서드
-    @GetMapping("/list")
+/*    @GetMapping("/list")
     public String findAll(Model model) {
         // BoardService를 사용하여 모든 게시글을 가져옵니다.
         List<BoardDTO> boardDTOList = boardService.findAll();
@@ -59,7 +59,7 @@ public class BoardController {
         model.addAttribute("boardList", boardDTOList);
         // 뷰 이름을 반환합니다.
         return "list";
-    }
+    }*/
 
     // 특정 게시글의 상세보기 메서드
     @GetMapping
