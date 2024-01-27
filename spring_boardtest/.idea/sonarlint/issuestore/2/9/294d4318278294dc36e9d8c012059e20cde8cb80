@@ -1,6 +1,4 @@
 
 ]
-java:S1192R"GDefine a constant instead of duplicating this literal "detail" 3 times.(ÁÀ’ÿ
-a
-java:S1192J"FDefine a constant instead of duplicating this literal "board" 3 times.(èû¨Õúÿÿÿÿ
-W	java:S1257"<This block of commented-out lines of code should be removed.(Èú¯l8ë›™Ô1
+java:S1192T"GDefine a constant instead of duplicating this literal "detail" 3 times.(ÁÀ’ÿ
+W	java:S1259"<This block of commented-out lines of code should be removed.(Èú¯l8ë›™Ô1

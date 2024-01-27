@@ -10,6 +10,7 @@ import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -27,13 +28,14 @@ public class BoardController {
 
     // 새로운 게시글을 생성폼 메서드
     @GetMapping("/save")
-    public String saveForm(){
+    public String saveForm(Model model){
+        model.addAttribute("boardDTO", new BoardDTO());
         return "save";
     }
 
     // 새로운 게시글을 저장하는 메서드
     @PostMapping("/save")
-    public String save(@ModelAttribute @Valid BoardDTO boardDTO, BindingResult bindingResult) {
+    public String save(@Validated @ModelAttribute BoardDTO boardDTO, BindingResult bindingResult) {
         // 제출된 boardDTO의 유효성 검사
         if (bindingResult.hasErrors()) {
             // 유효성 검사에 실패하면 오류 메시지와 함께 저장 폼으로 돌아갑니다.
@@ -97,14 +99,14 @@ public class BoardController {
         // BoardService를 사용하여 주어진 id로 식별된 게시글을 가져옵니다.
         BoardDTO boardDTO = boardService.findById(id);
         // 뷰에서 렌더링하기 위해 모델에 게시글을 추가합니다.
-        model.addAttribute("board", boardDTO);
+        model.addAttribute("boardDTO", boardDTO);
         // 뷰 이름을 반환합니다.
         return "update";
     }
 
     // 게시글을 수정 메서드
     @PostMapping("/update")
-    public String update(@ModelAttribute @Valid BoardDTO boardDTO, Model model, BindingResult bindingResult) {
+    public String update(@Validated @ModelAttribute BoardDTO boardDTO, BindingResult bindingResult, Model model) {
         // 제출된 boardDTO의 유효성 검사
         if (bindingResult.hasErrors()) {
             // 유효성 검사에 실패하면 상세 뷰로 돌아갑니다.

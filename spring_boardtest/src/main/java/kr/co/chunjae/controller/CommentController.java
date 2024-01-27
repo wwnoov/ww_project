@@ -1,12 +1,12 @@
 package kr.co.chunjae.controller;
 
-import kr.co.chunjae.dto.BoardDTO;
 import kr.co.chunjae.dto.CommentDTO;
 import kr.co.chunjae.service.CommentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -20,8 +20,10 @@ public class CommentController {
     private final CommentService commentService;
 
     @PostMapping("/save")
-    public @ResponseBody List<CommentDTO> save(@ModelAttribute CommentDTO commentDTO) {
+    public @ResponseBody List<CommentDTO> save(@Validated @ModelAttribute CommentDTO commentDTO ,BindingResult bindingResult) {
+
         commentService.save(commentDTO);
+
         // 해당 게시글에 작성된 댓글 리스트를 가져옴
         List<CommentDTO> commentDTOList = commentService.findAll(commentDTO.getBoardId());
         return commentDTOList;

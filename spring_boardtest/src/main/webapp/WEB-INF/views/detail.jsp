@@ -54,16 +54,12 @@
     <div id="comment-list">
         <table class="table table-striped">
             <tr>
-                <th>댓글번호</th>
                 <th>작성자</th>
                 <th>내용</th>
                 <th>작성시간</th>
             </tr>
             <c:forEach items="${commentList}" var="comment">
-                <tr>
-                    <td>
-                        <a href="/comment?id=${comment.id}">${comment.id}</a>
-                    </td>
+                <tr onclick="location.href='/comment?id=${comment.id}'" style="cursor: pointer;">
                     <td>${comment.commentWriter}</td>
                     <td>${comment.commentContents}</td>
                     <td>${comment.commentCreatedTime}</td>
@@ -149,6 +145,26 @@
             alert("특수문자는 입력하실수 없습니다.");
             obj.value = obj.value.substring( 0 , obj.value.length - 1 ); // 입력한 특수문자 한자리 지움
         }
+    }
+</script>
+<script>
+    function validate() {
+        var title = document.getElementById("boardTitle");
+        var content = document.getElementById("boardContents");
+
+        if (title.value.trim() === "") {
+            alert("제목을 입력해 주세요");
+            title.focus();
+            return false;
+        }
+
+        if (content.value.trim() === "") {
+            alert("내용을 입력해 주세요");
+            content.focus();
+            return false;
+        }
+
+        return true;
     }
 </script>
 </html>

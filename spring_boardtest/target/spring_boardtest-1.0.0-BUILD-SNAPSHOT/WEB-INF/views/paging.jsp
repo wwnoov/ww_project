@@ -23,11 +23,9 @@
         </thead>
         <tbody>
         <c:forEach items="${boardList}" var="board">
-            <tr>
+            <tr onclick="location.href='/board?id=${board.id}&page=${paging.page}'" style="cursor: pointer;">
                 <td>${board.id}</td>
-                <td>
-                    <a href="/board?id=${board.id}&page=${paging.page}">${board.boardTitle}</a>
-                </td>
+                <td>${board.boardTitle}</td>
                 <td>${board.boardWriter}</td>
                 <td>${board.boardCreatedTime}</td>
                 <td>${board.boardHits}</td>
