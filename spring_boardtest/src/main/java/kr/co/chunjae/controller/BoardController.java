@@ -64,7 +64,7 @@ public class BoardController {
     }*/
 
     // 특정 게시글의 상세보기 메서드
-    @GetMapping
+    @GetMapping("/detail")
     public String findById(@RequestParam("id") Long id,
                            @RequestParam(value = "page", required = false, defaultValue = "1") int page,
                            Model model) {
@@ -100,6 +100,7 @@ public class BoardController {
         BoardDTO boardDTO = boardService.findById(id);
         // 뷰에서 렌더링하기 위해 모델에 게시글을 추가합니다.
         model.addAttribute("boardDTO", boardDTO);
+        System.out.println(boardDTO);
         // 뷰 이름을 반환합니다.
         return "update";
     }
@@ -110,15 +111,15 @@ public class BoardController {
         // 제출된 boardDTO의 유효성 검사
         if (bindingResult.hasErrors()) {
             // 유효성 검사에 실패하면 상세 뷰로 돌아갑니다.
-            return "detail";
+            return "redirect:/board/paging";
         }
         // BoardService를 사용하여 게시글을 업데이트합니다.
         boardService.update(boardDTO);
         // 업데이트된 게시글을 가져와 모델에 추가하여 상세 뷰에서 렌더링합니다.
         BoardDTO dto = boardService.findById(boardDTO.getId());
-        model.addAttribute("board", dto);
+        model.addAttribute("boardDTO", dto);
         // 뷰 이름을 반환합니다.
-        return "detail";
+        return "redirect:/board/paging";
     }
 
     // 페이징 메서드

@@ -23,7 +23,7 @@
         </thead>
         <tbody>
         <c:forEach items="${boardList}" var="board">
-            <tr onclick="location.href='/board?id=${board.id}&page=${paging.page}'" style="cursor: pointer;">
+            <tr onclick="location.href='/board/detail?id=${board.id}&page=${paging.page}'" style="cursor: pointer;">
                 <td>${board.id}</td>
                 <td>${board.boardTitle}</td>
                 <td>${board.boardWriter}</td>

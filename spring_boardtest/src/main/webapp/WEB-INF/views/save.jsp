@@ -41,8 +41,8 @@
             <form:errors path="boardContents" cssClass="text-danger"/></div>
         </div>
         <div class="mb-3">
-        <button type="submit" class="btn btn-primary">작성</button>
-        <button type="button" class="btn btn-primary" onclick="backFn()">뒤로가기</button>
+        <form:button type="submit" class="btn btn-primary">작성</form:button>
+        <form:button type="button" class="btn btn-primary" onclick="backFn()">뒤로가기</form:button>
         </div>
     </form:form>
 </div>

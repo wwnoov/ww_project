@@ -16,47 +16,42 @@
         <form:form modelAttribute="boardDTO" action="/board/update" method="post" cssClass="mb-5">
             <div class="form-group">
                 <div class="mb-3">
+                    <form:hidden path="id"/>
                     <form:input path="boardWriter"  class="form-control" placeholder="${boardDTO.boardWriter}" readonly="true"/>
                     <form:errors path="boardWriter" cssClass="text-danger"/></div>
                 <div class="mb-3">
-                    <form:input path="boardPass"  class="form-control" placeholder="비밀번호" />
+                    <form:password path="boardPass"  class="form-control" onblur ="passfn()"/>
                     <form:errors path="boardPass" cssClass="text-danger"/></div>
                 <div class="mb-3">
-                    <form:input path="boardTitle"  class="form-control" placeholder="제목" />
+                    <form:input path="boardTitle"  class="form-control"/>
                     <form:errors path="boardTitle" cssClass="text-danger"/></div>
                 <div class="mb-3">
-                    <form:textarea path="boardContents"  class="form-control" rows="5" placeholder="내용을 입력하세요" />
+                    <form:textarea path="boardContents"  class="form-control" rows="5" />
                     <form:errors path="boardContents" cssClass="text-danger"/></div>
             </div>
             <div class="mb-3">
-                <button type="submit" class="btn btn-primary" onclick="updateReqFn()">수정</button>
+                <form:button type="submit" class="btn btn-primary" onclick="updateFn()">수정</form:button>
+                <form:button type="button" class="btn btn-primary" onclick="backFn()">뒤로</form:button>
             </div>
         </form:form>
     </div>
-</div>
 </body>
 <script>
-    const updateReqFn = () => {
-        if (validate()) {
+    const passfn = () => {
             const passInput = document.getElementById("boardPass").value;
-            const passDB = '${board.boardPass}';
+            const passDB = '<c:out value="${boardDTO.boardPass}" />';
+            console.log(passDB)
             if (passInput == passDB) {
-                alert("수정이 완료되었습니다.")
-                document.updateForm.submit();
+                alert("비밀번호가 일치합니다.")
             } else {
                 alert("비밀번호가 일치하지 않습니다!!");
             }
-        }
     }
-</script>
-<script>
-    // 특수문자 입력 방지
-    function characterCheck(obj){
-        var regExp = /[ \{\}\[\]\/|\)`^\-_+┼<>@\#$%&\'\"\\\(\=]/gi;
-        if( regExp.test(obj.value) ){
-            alert("특수문자는 입력하실수 없습니다.");
-            obj.value = obj.value.substring( 0 , obj.value.length - 1 ); // 입력한 특수문자 한자리 지움
-        }
+    const updateFn = () => {
+            alert("수정이 완료되었습니다.");
+    }
+    const backFn = () => {
+        window.history.back();
     }
 </script>
 </html>

@@ -111,14 +111,12 @@
                 console.log("작성성공");
                 console.log(commentList);
                 let output = "<table class='table table-striped'>";
-                output += "<tr><th>댓글번호</th>";
                 output += "<th>작성자</th>";
                 output += "<th>내용</th>";
                 output += "<th>작성시간</th></tr>";
 
                 for (let i in commentList) {
                     output += "<tr>";
-                    output += "<td><a href='/comment?id=" + commentList[i].id + "'>" + commentList[i].id + "</a></td>";
                     output += "<td>" + commentList[i].commentWriter + "</td>";
                     output += "<td>" + commentList[i].commentContents + "</td>";
                     output += "<td>" + commentList[i].commentCreatedTime + "</td>";
