@@ -6,7 +6,9 @@
 
 ```python
 # Spring basic project
-Spring 
+Spring CRUD Board
+페이징
+Ajax 활용 비동기식처리
 ```
 
 ## 👋 설명👋
