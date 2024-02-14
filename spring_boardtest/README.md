@@ -7,7 +7,8 @@
 ```python
 # Spring basic project
 Spring CRUD Board
-페이징
+리스트 페이징 처리
+유효성검사 진행
 Ajax 활용 비동기식처리
 ```
 
